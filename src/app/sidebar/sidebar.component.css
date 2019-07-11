@@ -1,0 +1,14 @@
+.sidebar,.list li{
+    color:black;
+}
+
+.sidebar{
+    position:relative;
+    height: 500px;
+    float:left;
+    background:grey;
+    font-size: 15px;
+    max-width:200px;
+    margin-top: 15px;
+    margin-bottom: 500px;
+}

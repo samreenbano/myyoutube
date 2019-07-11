@@ -1,0 +1,45 @@
+<div style="text-align:center">
+
+<input type="text" placeholder="search here" #search>
+<button (click)="onClick(search.value)">go</button>
+<div *ngFor="let video of videos" (click)="onClick(search.value)">
+    
+
+    <!-- card starts -->
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header> 
+       
+         <mat-card-content> 
+          
+            <!-- grid starts -->
+
+              <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>
+                    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                      <img [src]="video.snippet.thumbnails.medium.url" alt="..."></a>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-card-actions>
+                    <h5>
+                        <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
+                        </a></h5>
+                        <p>{{video.snippet.description}}</p>
+               
+              </mat-card-actions> 
+            </mat-grid-tile>
+              </mat-grid-list> 
+              <!-- grid ends -->
+
+           
+         </mat-card-content>
+        
+     </mat-card>  
+         <!-- card ends -->
+
+</div>
+
+
